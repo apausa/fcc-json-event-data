@@ -1,6 +1,6 @@
 # json-outputs-from-edm4hep
 
-JSON outputs from all EDM4HEP releases, generated from [FCC Tutorials](https://hep-fcc.github.io/fcc-tutorials/main/fast-sim-and-analysis/k4simdelphes/doc/starterkit/FccFastSimDelphes/Readme.html):
+JSON outputs from all EDM4HEP releases, generated from [FCC Tutorials](https://hep-fcc.github.io/fcc-tutorials/main/2-gen-and-fastsim/2-2-fastsim-delphes/README.html):
 
 ## Table of EDM4HEP releases and their respective schema
 
@@ -17,15 +17,20 @@ JSON outputs from all EDM4HEP releases, generated from [FCC Tutorials](https://h
 | **2026-02-01** | 1.0.0   | 6      |
 | **2026-04-08** | 1.0.0   | 6      |
 
-### Nightly versions and their respective schema
+### To know which release corresponds to each schema:
 
-- edm4hep 0.9.0: schema 1
-- edm4hep 0.10.0: schema 1
-- edm4hep 0.10.1: schema 1
-- edm4hep 0.10.3: schema 1
-- edm4hep 0.10.4: schema 1
-- edm4hep 0.10.99: schema 1
-- edm4hep 0.99.0: schema 2
+1. Check releases with `source /cvmfs/sw.hsf.org/key4hep/setup.sh --list-releases`
+2. Set up the stack with that date `source /cvmfs/sw.hsf.org/key4hep/setup.sh -r YYYY-MM-DD`
+3. Convert an event following the tutorial
+4. Check the edm4hep version and schema
+
+You can also approximate the dates by looking at https://github.com/key4hep/EDM4hep/releases.
+
+### To summarize
+
+- Schema 2 >= 0.99.0
+- Schema 3 == 0.99.2
+- Schema 4 >= 0.99.3
 
 ## List of collection types and their respective names
 
@@ -102,22 +107,22 @@ source /cvmfs/sw.hsf.org/key4hep/setup.sh -r 2026-02-01
 
 ### Event simulation
 
-From [FCC: Getting started with simulating events in Delphes](https://hep-fcc.github.io/fcc-tutorials/main/fast-sim-and-analysis/k4simdelphes/doc/starterkit/FccFastSimDelphes/Readme.html).
+From [FCC: Getting started with simulating events in Delphes](https://hep-fcc.github.io/fcc-tutorials/main/2-gen-and-fastsim/2-2-fastsim-delphes/README.html).
 
 2.1 Download official pythia cards for the various processes
 
 ```bash
 # e+ e- -> ZH -> Z and H to anything
-wget https://raw.githubusercontent.com/HEP-FCC/FCC-config/winter2023/FCCee/Generator/Pythia8/p8_ee_ZH_ecm240.cmd
+wget https://raw.githubusercontent.com/HEP-FCC/FCC-config/main/FCCee/Generator/Pythia8/p8_ee_ZH_ecm240.cmd
 
 # e+ e- -> ZZ -> Z to anything
-wget https://raw.githubusercontent.com/HEP-FCC/FCC-config/winter2023/FCCee/Generator/Pythia8/p8_ee_ZZ_ecm240.cmd
+wget https://raw.githubusercontent.com/HEP-FCC/FCC-config/main/FCCee/Generator/Pythia8/p8_ee_ZZ_ecm240.cmd
 
 # e+ e- -> WW -> W to anything
-wget https://raw.githubusercontent.com/HEP-FCC/FCC-config/winter2023/FCCee/Generator/Pythia8/p8_ee_WW_ecm240.cmd
+wget https://raw.githubusercontent.com/HEP-FCC/FCC-config/main/FCCee/Generator/Pythia8/p8_ee_WW_ecm240.cmd
 
-wget https://raw.githubusercontent.com/HEP-FCC/FCC-config/winter2023/FCCee/Delphes/card_IDEA.tcl
-wget https://raw.githubusercontent.com/HEP-FCC/FCC-config/winter2023/FCCee/Delphes/edm4hep_IDEA.tcl
+wget https://raw.githubusercontent.com/HEP-FCC/FCC-config/main/FCCee/Delphes/card_IDEA.tcl
+wget https://raw.githubusercontent.com/HEP-FCC/FCC-config/main/FCCee/Delphes/edm4hep_IDEA.tcl
 ```
 
 2.2. Simulate events with DelphesEDM4Hep
