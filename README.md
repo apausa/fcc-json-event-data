@@ -1,8 +1,10 @@
 # FCC Study Event Data in JSON
 
-Archive of FCCC Study event data in JSON, generated from [FCC Tutorials](https://hep-fcc.github.io/fcc-tutorials/main/2-gen-and-fastsim/2-2-fastsim-delphes/README.html). For every new EDM4HEP schema in a stable Key4hep release.
+Archive of FCCC Study event data in JSON, generated from [FCC Tutorials](https://hep-fcc.github.io/fcc-tutorials/main/2-gen-and-fastsim/2-2-fastsim-delphes/README.html). For every new EDM4HEP schema in a production Key4hep release. And some nightly releases.
 
-## Table of Key4hep releases and their EDM4HEP schema
+Edm4hep schema definitions are also provided.
+
+## Table of Key4hep versions and their EDM4HEP schema
 
 | **Key4hep Release** | **EDM4HEP version** | **EDM4HEP schema** |
 | ------------------- | ------------------- | ------------------ |
@@ -17,12 +19,12 @@ Archive of FCCC Study event data in JSON, generated from [FCC Tutorials](https:/
 | **2026-02-01**      | 1.0.0               | 6                  |
 | **2026-04-08**      | 1.0.0               | 6                  |
 
-To ensure backwards compatibility in visualizations, differences between the following schemas should be considered:
+To ensure backwards compatibility in visualizations, differences between the following versions should be considered:
 
-- Schema 1 (< 0.99.0)
-- Schema 2 (>= 0.99.0)
-- Schema 3 (== 0.99.2)
-- Schema 4 (>= 0.99.3)
+- Schema 1 (< EDM4HEP 0.99.0)
+- Schema 2 (>= EDM4HEP 0.99.0)
+- Schema 3 (== EDM4HEP 0.99.2)
+- Schema 4 (>= EDM4HEP 0.99.3)
 
 ### To know which release corresponds to each schema
 
